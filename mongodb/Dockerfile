@@ -1,0 +1,1 @@
+FROM MONGO:7.0
