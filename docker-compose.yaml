@@ -22,7 +22,7 @@ services:
    - redis
    - mongodb
    cart:
-    image: maahirasheik/car:v1
+    image: maahirasheik/cart:v1
     container_name: cart
     depends_on:
     - catalogue
