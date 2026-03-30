@@ -9,7 +9,7 @@ services:
     container_name: mongodb
   catalogue:
     image: maahirasheik/catalogue:v1
-    conatainer_name: catalogue
+    container_name: catalogue
     depends_on:
     - mongodb
     
