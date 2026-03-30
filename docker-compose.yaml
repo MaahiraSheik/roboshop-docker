@@ -21,7 +21,7 @@ services:
    depends_on:
    - redis
    - mongodb
-   cart:
+  cart:
     image: maahirasheik/cart:v1
     container_name: cart
     depends_on:
