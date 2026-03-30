@@ -12,4 +12,29 @@ services:
     container_name: catalogue
     depends_on:
     - mongodb
+  redis:
+    image: redis:7.0
+    container_name: redis
+  user:
+   image: maahirasheik/user:v1
+   container_name: user
+   depends_on:
+   - redis
+   - mongodb
+   cart:
+    image: maahirasheik/car:v1
+    container_name: cart
+    depends_on:
+    - catalogue
+    - redis
+  mysql:
+    image: maahirasheik/mysql:v1
+    container_name: mysql
+  shipping:
+    image: maahirasheik/shipping:v1
+    container_name: shipping
+    depends_on:
+    - cart
+    - mysql
+
     
